@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		FF61180421B098AD00EB3CEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61180321B098AD00EB3CEA /* AppDelegate.swift */; };
-		FF61180621B098AD00EB3CEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61180521B098AD00EB3CEA /* ViewController.swift */; };
 		FF61180921B098AD00EB3CEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF61180721B098AD00EB3CEA /* Main.storyboard */; };
 		FF61180C21B098AD00EB3CEA /* ToDoListApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF61180A21B098AD00EB3CEA /* ToDoListApp.xcdatamodeld */; };
 		FF61180E21B098AE00EB3CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF61180D21B098AE00EB3CEA /* Assets.xcassets */; };
 		FF61181121B098AE00EB3CEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF61180F21B098AE00EB3CEA /* LaunchScreen.storyboard */; };
+		FF61181921B09AEC00EB3CEA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61181821B09AEC00EB3CEA /* DetailsViewController.swift */; };
+		FF61181B21B09B3900EB3CEA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61181A21B09B3900EB3CEA /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF61180021B098AD00EB3CEA /* ToDoListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF61180321B098AD00EB3CEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF61180521B098AD00EB3CEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FF61180821B098AD00EB3CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF61180B21B098AD00EB3CEA /* ToDoListApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoListApp.xcdatamodel; sourceTree = "<group>"; };
 		FF61180D21B098AE00EB3CEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF61181021B098AE00EB3CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF61181221B098AE00EB3CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF61181821B09AEC00EB3CEA /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		FF61181A21B09B3900EB3CEA /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				FF61180321B098AD00EB3CEA /* AppDelegate.swift */,
-				FF61180521B098AD00EB3CEA /* ViewController.swift */,
 				FF61180721B098AD00EB3CEA /* Main.storyboard */,
 				FF61180D21B098AE00EB3CEA /* Assets.xcassets */,
 				FF61180F21B098AE00EB3CEA /* LaunchScreen.storyboard */,
 				FF61181221B098AE00EB3CEA /* Info.plist */,
 				FF61180A21B098AD00EB3CEA /* ToDoListApp.xcdatamodeld */,
+				FF61181821B09AEC00EB3CEA /* DetailsViewController.swift */,
+				FF61181A21B09B3900EB3CEA /* RootViewController.swift */,
 			);
 			path = ToDoListApp;
 			sourceTree = "<group>";
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF61180621B098AD00EB3CEA /* ViewController.swift in Sources */,
 				FF61180421B098AD00EB3CEA /* AppDelegate.swift in Sources */,
 				FF61180C21B098AD00EB3CEA /* ToDoListApp.xcdatamodeld in Sources */,
+				FF61181B21B09B3900EB3CEA /* RootViewController.swift in Sources */,
+				FF61181921B09AEC00EB3CEA /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
