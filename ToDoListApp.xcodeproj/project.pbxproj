@@ -12,7 +12,6 @@
 		FF61180C21B098AD00EB3CEA /* ToDoListApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF61180A21B098AD00EB3CEA /* ToDoListApp.xcdatamodeld */; };
 		FF61180E21B098AE00EB3CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF61180D21B098AE00EB3CEA /* Assets.xcassets */; };
 		FF61181121B098AE00EB3CEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF61180F21B098AE00EB3CEA /* LaunchScreen.storyboard */; };
-		FF61181921B09AEC00EB3CEA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61181821B09AEC00EB3CEA /* DetailsViewController.swift */; };
 		FF61181B21B09B3900EB3CEA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61181A21B09B3900EB3CEA /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +23,6 @@
 		FF61180D21B098AE00EB3CEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF61181021B098AE00EB3CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF61181221B098AE00EB3CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF61181821B09AEC00EB3CEA /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		FF61181A21B09B3900EB3CEA /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +62,6 @@
 				FF61180F21B098AE00EB3CEA /* LaunchScreen.storyboard */,
 				FF61181221B098AE00EB3CEA /* Info.plist */,
 				FF61180A21B098AD00EB3CEA /* ToDoListApp.xcdatamodeld */,
-				FF61181821B09AEC00EB3CEA /* DetailsViewController.swift */,
 				FF61181A21B09B3900EB3CEA /* RootViewController.swift */,
 			);
 			path = ToDoListApp;
@@ -144,7 +141,6 @@
 				FF61180421B098AD00EB3CEA /* AppDelegate.swift in Sources */,
 				FF61180C21B098AD00EB3CEA /* ToDoListApp.xcdatamodeld in Sources */,
 				FF61181B21B09B3900EB3CEA /* RootViewController.swift in Sources */,
-				FF61181921B09AEC00EB3CEA /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
