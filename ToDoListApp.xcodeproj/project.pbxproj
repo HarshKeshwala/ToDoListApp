@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF4D7E3C21B9E55900C128EF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D7E3B21B9E55900C128EF /* DetailsViewController.swift */; };
 		FF61180421B098AD00EB3CEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61180321B098AD00EB3CEA /* AppDelegate.swift */; };
 		FF61180921B098AD00EB3CEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF61180721B098AD00EB3CEA /* Main.storyboard */; };
 		FF61180C21B098AD00EB3CEA /* ToDoListApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF61180A21B098AD00EB3CEA /* ToDoListApp.xcdatamodeld */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF4D7E3B21B9E55900C128EF /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		FF61180021B098AD00EB3CEA /* ToDoListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF61180321B098AD00EB3CEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF61180821B098AD00EB3CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				FF61181221B098AE00EB3CEA /* Info.plist */,
 				FF61180A21B098AD00EB3CEA /* ToDoListApp.xcdatamodeld */,
 				FF61181A21B09B3900EB3CEA /* RootViewController.swift */,
+				FF4D7E3B21B9E55900C128EF /* DetailsViewController.swift */,
 			);
 			path = ToDoListApp;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				FF61180421B098AD00EB3CEA /* AppDelegate.swift in Sources */,
 				FF61180C21B098AD00EB3CEA /* ToDoListApp.xcdatamodeld in Sources */,
 				FF61181B21B09B3900EB3CEA /* RootViewController.swift in Sources */,
+				FF4D7E3C21B9E55900C128EF /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,7 @@ import CoreData
 
 class RootViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource
 {
-    var tasks: [NSManagedObject] = []
+    var tasks: [Entity] = []
     
     @IBOutlet weak var tasksList: UITableView!
     
@@ -33,7 +33,7 @@ class RootViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         
         do
         {
-            tasks = try context.fetch(fetchData)
+            tasks = try context.fetch(fetchData) as! [Entity]
         }
         catch
         {
@@ -59,12 +59,12 @@ class RootViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     }
 
     
-
+//
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        tableView.deselectRow(at: indexPath, animated: true)
 //
 //        var t = self.tasks[indexPath.row]
-//        t.completed = !t.completed
+//        self.tasks[indexPath.row].completed = tasks[indexPath.row].completed
 //        saveTasks
 //    }
 
@@ -72,15 +72,30 @@ class RootViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
 
-//        let finished = UITableViewRowAction(style: .normal, title: "Mark Finished") { action, indexPath in
-//            //print("more button tapped")
-//            self.tasksList.deselectRow(at: indexPath, animated: true)
-//
-//            var t = self.tasks[indexPath.row]
-//            t.completed = !t.completed
-//            self.saveTasks(alert: UIAlertAction)
-//        }
-//        finished.backgroundColor = .lightGray
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        _ = NSEntityDescription.entity(forEntityName: "Entity", in: context)!
+        
+        let finished = UITableViewRowAction(style: .normal, title: "Mark Finished") { action, indexPath in
+            //print("more button tapped")
+            self.tasksList.deselectRow(at: indexPath, animated: true)
+            
+            self.tasksList.cellForRow(at: indexPath)?.accessoryType = .checkmark
+            
+            let t = self.tasks[indexPath.row]
+            t.completed = !t.completed
+            
+            do
+            {
+                try context.save()
+            }
+            catch
+            {
+                print("Error occured.")
+            }
+            self.tasksList.reloadData()
+        }
+        finished.backgroundColor = .lightGray
 
         let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, indexPath in
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -101,7 +116,7 @@ class RootViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         }
         delete.backgroundColor = .red
 
-        return [delete]
+        return [delete, finished]
     }
 
 
@@ -142,8 +157,8 @@ class RootViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             do
             {
                 try context.save()
-                tasks.append(theTitle)
-                tasks.append(theDesc)
+                tasks.append(theTitle as! Entity)
+                tasks.append(theDesc as! Entity)
             }
             catch
             {
@@ -180,10 +195,16 @@ class RootViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let title = tasks[indexPath.row]
         let cell = tasksList.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = title.value(forKey: "name") as? String
-        cell.detailTextLabel?.text = title.value(forKey: "notes") as? String
+        
+        if tasks[indexPath.row].completed{
+            cell.accessoryType = .checkmark
+        }
+        else{
+            cell.accessoryType = .none
+        }
+        cell.textLabel?.text = self.tasks[indexPath.row].value(forKey: "name") as? String
+        cell.detailTextLabel?.text = self.tasks[indexPath.row].value(forKey: "notes") as? String
         return cell
     }
 }
